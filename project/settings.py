@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8uwa!a4b+)9)t33^!6&o0r%$wjf4nc!3omo4)dap_cqubevl4j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ["DEBUG"]
-MODE = os.environ["MODE"]
+DEBUG = False
+# MODE = os.environ["MODE"]
 
 
 ALLOWED_HOSTS = [
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if MODE == "Dev":
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -90,7 +90,7 @@ if MODE == "Dev":
         }
     }
 
-elif MODE == "Prod":
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
