@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <ul>
-        <h1> Hoolla</h1>
+        <h1 className="title"> Hoolla</h1>
         {this.state.data.map(qa => {
           return (
             <li key={qa.id}>

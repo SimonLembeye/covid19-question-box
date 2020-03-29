@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static "css/App.css" %}">
   <title>Django REST with React</title>
 </head>
 <body>
@@ -10,6 +12,5 @@
     <!-- React will load here -->
 </div>
 </body>
-{% load static %}
 <script src="{% static "frontend/main.js" %}"></script>
 </html>
