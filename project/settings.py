@@ -28,6 +28,7 @@ MODE = os.environ["MODE"]
 
 
 ALLOWED_HOSTS = [
+    "127.0.0.1",
     "134.122.86.217"
 ]
 
